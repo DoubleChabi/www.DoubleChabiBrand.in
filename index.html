@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Double Chabi | Premium Basmati Rice</title>
+  <meta name="description" content="Double Chabi is a premium Basmati rice brand known for extra-long grains, natural aroma and non-sticky texture.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #26351f;
+      background: #fffdf5;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #174b2a;
+      color: white;
+      box-shadow: 0 3px 15px rgba(0,0,0,.15);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      color: #e7bd45;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #e7bd45;
+    }
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(16,55,28,.94), rgba(16,55,28,.65), rgba(16,55,28,.15)),
+        url("https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      max-width: 750px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #f1cb55;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 650px;
+      margin-bottom: 35px;
+      color: #f6f6f6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 27px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: #d9ad35;
+      color: #173d22;
+    }
+
+    .btn-primary:hover {
+      background: #f0ca57;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #174b2a;
+    }
+
+    section {
+      padding: 80px 25px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      color: #174b2a;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #68715f;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 400px;
+      border-radius: 20px;
+      background:
+        url("https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=1000&q=85")
+        center/cover;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    }
+
+    .about h2 {
+      font-size: 40px;
+      color: #174b2a;
+      margin-bottom: 18px;
+    }
+
+    .about p {
+      margin-bottom: 17px;
+      color: #50594a;
+    }
+
+    .features {
+      background: #f1ead1;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      background: white;
+      padding: 32px 25px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.07);
+    }
+
+    .feature-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      color: #174b2a;
+      margin-bottom: 8px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,.09);
+      transition: .3s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+    }
+
+    .product-image {
+      height: 240px;
+      background:
+        url("https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=800&q=85")
+        center/cover;
+    }
+
+    .product:nth-child(2) .product-image {
+      background-image:
+        url("https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&q=85");
+    }
+
+    .product:nth-child(3) .product-image {
+      background-image:
+        url("https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=85");
+    }
+
+    .product-info {
+      padding: 24px;
+    }
+
+    .product-info h3 {
+      color: #174b2a;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      background: #174b2a;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #e7eee6;
+    }
+
+    footer {
+      background: #0e2f1a;
+      color: #cbd6c9;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 29px;
+      text-decoration: none;
+      box-shadow: 0 5px 20px rgba(0,0,0,.25);
+      z-index: 999;
+    }
+
+    @media (max-width: 800px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      .about,
+      .feature-grid,
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 300px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .contact h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Double <span>Chabi</span></div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Premium Rice.<br><span>Perfect Every Time.</span></h1>
+
+      <p>
+        Discover the rich aroma, extra-long grains and naturally non-sticky
+        texture of Double Chabi Premium Basmati Rice.
+      </p>
+
+      <a href="#products" class="btn btn-primary">Explore Products</a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+
+      <div class="about-image"></div>
+
+      <div>
+        <h2>About Double Chabi</h2>
+
+        <p>
+          Double Chabi is a premium Basmati rice brand focused on bringing
+          exceptional quality and authentic taste to every kitchen.
+        </p>
+
+        <p>
+          Our rice is selected for its extra-long grains, natural aroma and
+          beautiful texture, making every meal special.
+        </p>
+
+        <p>
+          From everyday family meals to celebrations, Double Chabi brings
+          premium rice to your table.
+        </p>
+
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Double Chabi?</h2>
+        <p>Quality you can see. Taste you can remember.</p>
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature">
+          <div class="feature-icon">🌾</div>
+          <h3>Extra-Long Grains</h3>
+          <p>Beautiful, long and fluffy grains for a premium dining experience.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">✨</div>
+          <h3>Natural Aroma</h3>
+          <p>Enjoy the authentic fragrance of premium Basmati rice.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🍚</div>
+          <h3>Non-Sticky Texture</h3>
+          <p>Separate, fluffy grains that look as good as they taste.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Products</h2>
+        <p>Premium rice for every occasion.</p>
+      </div>
+
+      <div class="products">
+
+        <div class="product">
+          <div class="product-image"></div>
+          <div class="product-info">
+            <h3>Premium Basmati Rice</h3>
+            <p>Extra-long grains with a naturally rich aroma and elegant texture.</p>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-image"></div>
+          <div class="product-info">
+            <h3>Daily Basmati</h3>
+            <p>Perfect for delicious everyday meals and family cooking.</p>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-image"></div>
+          <div class="product-info">
+            <h3>Special Selection</h3>
+            <p>A premium choice for biryani, pulao and special occasions.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Let's Connect</h2>
+
+      <p>
+        Interested in Double Chabi products or want to know more?
+        Get in touch with us today.
+      </p>
+
+      <!-- Replace this number with your real WhatsApp number -->
+      <a
+        href="https://wa.me/91XXXXXXXXXX"
+        class="btn btn-primary"
+        target="_blank">
+        WhatsApp Us
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Double Chabi. All Rights Reserved.
+</footer>
+
+<a
+  href="https://wa.me/91XXXXXXXXXX"
+  class="whatsapp"
+  target="_blank"
+  aria-label="WhatsApp">
+  ☎
+</a>
+
+</body>
+</html>
